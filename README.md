@@ -1,1 +1,1 @@
-# -DailyLuck
+# DailyLuck
