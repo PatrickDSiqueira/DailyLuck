@@ -3,6 +3,8 @@ var consign = require('consign');
 
 var app = express();
 
+app.use(express.json())
+
 consign()
     .include('src/routes')
     .then('src/repositories')
