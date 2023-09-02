@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="" />
+    <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/projeto.I02Q7Q.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/migrations/20230901232256-create-access-type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/migrations/20230901232257-create-user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/models/accesstype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/models/team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/seeders/20230901234456-demo-users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/projeto.I02Q7Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/radiologia_newton.cXVeMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources/a423caa0-0e4e-407f-888b-f2b4330e8d03/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/database/migrations/20230901020621-create-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/migrations/20230901232058-create-team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/database/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/LoginRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/LoginRoute.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2UjPSmemV8flriRK2SLENlHmT1H" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,11 +59,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/server",
-    "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/backend",
+    "git-widget-placeholder": "feature/Auth",
+    "last_opened_file_path": "C:/Desenvolvimento/DailyLuck",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Desenvolvimento\DailyLuck" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693450018791</updated>
       <workItem from="1693450019888" duration="15000" />
+      <workItem from="1693605011596" duration="14948000" />
     </task>
     <servers />
   </component>

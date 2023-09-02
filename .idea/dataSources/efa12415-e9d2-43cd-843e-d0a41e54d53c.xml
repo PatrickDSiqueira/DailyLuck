@@ -747,35 +747,23 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="224" parent="1" name="information_schema">
-      <IntrospectionTimestamp>2023-08-30.22:33:34</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:33:34</LocalIntrospectionTimestamp>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="225" parent="1" name="mysql">
-      <Grants>user|||mysql.session|localhost|SELECT|G</Grants>
-      <IntrospectionTimestamp>2023-08-30.22:33:35</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:33:35</LocalIntrospectionTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <schema id="226" parent="1" name="performance_schema">
-      <IntrospectionTimestamp>2023-08-30.22:33:36</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:33:36</LocalIntrospectionTimestamp>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="227" parent="1" name="projeto">
-      <IntrospectionTimestamp>2023-08-30.22:34:27</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:34:27</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-02.05:07:25</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-02.11:07:25</LocalIntrospectionTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <schema id="228" parent="1" name="radiologia_newton">
-      <IntrospectionTimestamp>2023-08-30.22:33:36</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:33:36</LocalIntrospectionTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <schema id="229" parent="1" name="sys">
-      <Grants>sys_config|||mysql.sys|localhost|SELECT|G</Grants>
-      <IntrospectionTimestamp>2023-08-30.22:33:37</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.04:33:37</LocalIntrospectionTimestamp>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <user id="230" parent="1" name="mysql.session">
@@ -787,5 +775,172 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="232" parent="1" name="root">
       <Host>localhost</Host>
     </user>
+    <table id="233" parent="227" name="accesstypes">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="234" parent="227" name="sequelizemeta">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_unicode_ci</CollationName>
+    </table>
+    <table id="235" parent="227" name="teams">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="236" parent="227" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <column id="237" parent="233" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="238" parent="233" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="239" parent="233" name="createdAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="240" parent="233" name="updatedAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="241" parent="233" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="242" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="243" parent="234" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <index id="244" parent="234" name="PRIMARY">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="245" parent="234" name="name">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="246" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="247" parent="234" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="248" parent="235" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="249" parent="235" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="250" parent="235" name="createdAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="251" parent="235" name="updatedAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="252" parent="235" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="253" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="254" parent="236" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="255" parent="236" name="cpf">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="256" parent="236" name="firstName">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="257" parent="236" name="lastName">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="258" parent="236" name="team_id">
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="259" parent="236" name="access_type_id">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="260" parent="236" name="createdAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="261" parent="236" name="updatedAt">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="262" parent="236" name="users_ibfk_1">
+      <ColNames>team_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>teams</RefTableName>
+    </foreign-key>
+    <foreign-key id="263" parent="236" name="users_ibfk_2">
+      <ColNames>access_type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>accesstypes</RefTableName>
+    </foreign-key>
+    <index id="264" parent="236" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="265" parent="236" name="team_id">
+      <ColNames>team_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="266" parent="236" name="access_type_id">
+      <ColNames>access_type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="267" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
