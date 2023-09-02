@@ -42,5 +42,4 @@ module.exports = async (req, res, next) => {
             message: "Your token is invalid"
         });
     }
-
 }
