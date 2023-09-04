@@ -27,6 +27,8 @@ module.exports = (sequelize) => {
         lastName: DataTypes.STRING,
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
+        access_type_id: DataTypes.INTEGER,
+        team_id: DataTypes.INTEGER
     }, {
         sequelize,
         modelName: 'User',
