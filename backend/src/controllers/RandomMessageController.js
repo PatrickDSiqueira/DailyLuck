@@ -1,4 +1,4 @@
-const UserRepository = require('../repositories/UserReposytory');
+const UserRepository = require('../repositories/UserRepository');
 const ControlMessageRepository = require('../repositories/ControlMessageRepository');
 
 const AdvicesLipService = require('../services/AdvicesLipService');

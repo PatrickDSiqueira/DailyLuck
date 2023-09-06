@@ -1,4 +1,4 @@
-const UserRepository = require('../repositories/UserReposytory')
+const UserRepository = require('../repositories/UserRepository')
 const Helper = require('../Helpers/Helper');
 
 class UserController {
