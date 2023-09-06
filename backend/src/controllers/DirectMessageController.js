@@ -36,14 +36,14 @@ class DirectMessageController {
 
             const currentUser = await UserRepository.getUserById(user_id);
 
-            if (await UserRepository.isLeader(currentUser) === false){
+            if (await UserRepository.isLeader(currentUser) === false) {
 
                 return res.status(403)
-                    .json({error : 'you dont have access'});
+                    .json({error: 'you dont have access'});
             }
 
-            if(!message){
-                return  res.status(400).json({error: 'Message is required'})
+            if (!message) {
+                return res.status(400).json({error: 'Message is required'})
             }
 
             await DirectMessageRepository.create(currentUser.team_id, message);
@@ -68,23 +68,23 @@ class DirectMessageController {
 
             const currentUser = await UserRepository.getUserById(user_id);
 
-            if (await UserRepository.isLeader(currentUser) === false){
+            if (await UserRepository.isLeader(currentUser) === false) {
 
                 return res.status(403)
-                    .json({error : 'you dont have access'});
+                    .json({error: 'you dont have access'});
             }
 
-            if(!message){
-                return  res.status(400).json({error: 'Message is required'})
+            if (!message) {
+                return res.status(400).json({error: 'Message is required'})
             }
 
-            if(!id){
-                return  res.status(400).json({error: 'Identification message is required'})
+            if (!id) {
+                return res.status(400).json({error: 'Identification message is required'})
             }
 
             const directMessage = await DirectMessageRepository.getById(id);
 
-            if(!directMessage){
+            if (!directMessage) {
 
                 return res.status(404).json({error: 'Message no found'})
             }
@@ -111,19 +111,19 @@ class DirectMessageController {
 
             const currentUser = await UserRepository.getUserById(user_id);
 
-            if (await UserRepository.isLeader(currentUser) === false){
+            if (await UserRepository.isLeader(currentUser) === false) {
 
                 return res.status(403)
-                    .json({error : 'you dont have access'});
+                    .json({error: 'you dont have access'});
             }
 
-            if(!id){
-                return  res.status(400).json({error: 'Identification message is required'})
+            if (!id) {
+                return res.status(400).json({error: 'Identification message is required'})
             }
 
             const directMessage = await DirectMessageRepository.getById(id);
 
-            if(!directMessage){
+            if (!directMessage) {
 
                 return res.status(404).json({error: 'Message no found'})
             }

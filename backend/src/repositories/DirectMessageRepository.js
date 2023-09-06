@@ -48,6 +48,7 @@ class DirectMessageRepository {
             console.error(error)
         }
     }
+
     async deleteMessage(directMessage) {
 
         try {

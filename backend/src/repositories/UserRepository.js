@@ -1,4 +1,4 @@
-const {User, Team, AccessType, ControlMessage, DirectMessage} = require('../database/models')
+const {User, Team, AccessType, ControlMessage} = require('../database/models')
 
 class UserRepository {
 
@@ -51,17 +51,17 @@ class UserRepository {
         });
     }
 
-    async isLeader(user){
+    async isLeader(user) {
 
         console.log(user.firstName)
         return user.accessType.name === 'Lider';
     }
 
-    async isAdmin(user){
+    async isAdmin(user) {
         return user.accessType.name === 'Administrador';
     }
 
-    async isEmployees (user){
+    async isEmployees(user) {
         return user.accessType.name === 'Colaborador';
     }
 }
