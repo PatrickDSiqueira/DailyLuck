@@ -6,7 +6,11 @@ module.exports = (sequelize, DataTypes) => {
   class ControlMessage extends Model {
 
     static associate(models) {
-      this.belongsTo(models.User);
+
+      this.belongsTo(models.User, {
+        foreignKey: 'userId',
+        as: 'controlMessage'
+      });
     }
   }
   ControlMessage.init({

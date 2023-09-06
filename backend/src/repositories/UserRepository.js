@@ -50,6 +50,20 @@ class UserRepository {
             ]
         });
     }
+
+    async isLeader(user) {
+
+        console.log(user.firstName)
+        return user.accessType.name === 'Lider';
+    }
+
+    async isAdmin(user) {
+        return user.accessType.name === 'Administrador';
+    }
+
+    async isEmployees(user) {
+        return user.accessType.name === 'Colaborador';
+    }
 }
 
 module.exports = new UserRepository();

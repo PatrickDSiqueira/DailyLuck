@@ -11,7 +11,12 @@ module.exports = (sequelize, DataTypes) => {
             this.hasMany(models.User, {
                 foreignKey: 'team_id',
                 as: 'users',
-            })
+            });
+
+            this.hasOne(models.DirectMessage, {
+                foreignKey: 'teamId',
+                as: 'directMessage'
+            });
         }
     }
 
