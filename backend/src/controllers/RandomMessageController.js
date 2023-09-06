@@ -30,15 +30,11 @@ class RandomMessageController {
 
             const result = await AdvicesLipService.getRandomMessage();
 
-            if (result.status === 200) {
+            await ControlMessageRepository.countOneMessage(controlMessage)
+                .then(() => {
 
-                await ControlMessageRepository.countOneMessage(controlMessage);
-                return res.status(200).json({data : result.data});
-
-            } else {
-
-                return res.status(result.status).json({error: 'Error in request'})
-            }
+                    return res.status(200).json({result});
+                });
 
         } catch (error) {
 

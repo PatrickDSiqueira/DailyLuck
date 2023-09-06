@@ -39,9 +39,6 @@ class LoginController {
         //     })
         // }
 
-
-        console.log(userExist.team.name)
-
         return res.status(200).json({
             user: {
                 name: userExist.name,

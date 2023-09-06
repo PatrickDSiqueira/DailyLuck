@@ -1,3 +1,5 @@
+const TranslateService = require('./TranslateService')
+
 const axios = require('axios');
 
 class AdvicesLipService {
@@ -9,7 +11,29 @@ class AdvicesLipService {
 
     async getRandomMessage() {
 
-        return await axios.get(this.url);
+        try {
+            const data = await axios.get(this.url)
+                .then((response) => {
+
+                    return response.data
+
+                }).catch((error) => {
+
+                    console.log(error)
+                    return {error}
+                });
+
+
+            const randomMessage = data.slip.advice;
+
+            const randomMessageTranslate = await TranslateService.translateEnglishToPortuguese(randomMessage);
+
+            return {en: randomMessage, pt: randomMessageTranslate};
+
+        } catch (error) {
+
+            return {error: 'Internal error'}
+        }
     }
 }
 
