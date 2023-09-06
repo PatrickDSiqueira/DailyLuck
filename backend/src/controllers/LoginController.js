@@ -8,8 +8,9 @@ class LoginController {
     async index(req, res) {
 
         const {cpf} = req.body;
+
         const userExist = await User.findOne({
-            where: cpf,
+            where: {cpf},
             include: [
                 {
                     model: Team,
