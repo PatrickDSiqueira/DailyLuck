@@ -10,9 +10,37 @@ class UserRepository {
 
         return !user;
     }
+    async thereIsTeam(id) {
+
+        const user = await Team.findOne({
+            where: {id},
+        });
+
+        return !user;
+    }
 
     async createUser(cpf, firstName, lastName, access_type_id, team_id) {
 
+        try {
+
+            return await User.create({
+                cpf,
+                firstName,
+                lastName,
+                createdAt: new Date(),
+                updatedAt: new Date(),
+                team_id,
+                access_type_id
+            });
+
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    async createLeader(cpf, firstName, lastName, team_id) {
+
+        const access_type_id = 2;
         try {
 
             return await User.create({
@@ -51,10 +79,41 @@ class UserRepository {
         });
     }
 
+    async getAllUsers() {
+
+        return await User.findAll({
+            include: [
+                {
+                    model: Team,
+                    as: 'team',
+                },
+                {
+                    model: AccessType,
+                    as: 'accessType',
+                },
+                {
+                    model: ControlMessage,
+                    as: 'controlMessage',
+                },
+            ]
+        });
+    }
+
     async isLeader(user) {
 
-        console.log(user.firstName)
         return user.accessType.name === 'Lider';
+    }
+
+    async inactiveUser(user) {
+
+        user.isActive = false
+        await user.save();
+    }
+
+    async activeUser(user) {
+
+        user.isActive = true
+        await user.save();
     }
 
     async isAdmin(user) {

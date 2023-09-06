@@ -30,6 +30,7 @@ module.exports = (sequelize) => {
         cpf: DataTypes.STRING,
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
+        isActive: DataTypes.BOOLEAN,
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
         access_type_id: DataTypes.INTEGER,

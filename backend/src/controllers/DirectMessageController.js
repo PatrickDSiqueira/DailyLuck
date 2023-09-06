@@ -96,10 +96,8 @@ class DirectMessageController {
         } catch (error) {
 
             console.error(error)
-
             return res.status(500).json({error: 'Internal error'})
         }
-
     }
 
     async delete(req, res) {
