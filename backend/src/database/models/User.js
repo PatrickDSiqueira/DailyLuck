@@ -18,6 +18,11 @@ module.exports = (sequelize) => {
                 foreignKey: 'access_type_id',
                 as: 'accessType'
             });
+
+            this.hasOne(models.ControlMessage, {
+                foreignKey: 'userId',
+                as: 'controlMessage'
+            });
         }
     }
 

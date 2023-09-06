@@ -1,4 +1,4 @@
-const {User} = require('../database/models')
+const {User, Team, AccessType, ControlMessage} = require('../database/models')
 
 class UserRepository {
 
@@ -19,8 +19,8 @@ class UserRepository {
                 cpf,
                 firstName,
                 lastName,
-                createdAt : new Date(),
-                updatedAt : new Date(),
+                createdAt: new Date(),
+                updatedAt: new Date(),
                 team_id,
                 access_type_id
             });
@@ -28,6 +28,27 @@ class UserRepository {
         } catch (error) {
             console.error(error)
         }
+    }
+
+    async getUserById(id) {
+
+        return await User.findOne({
+            where: id,
+            include: [
+                {
+                    model: Team,
+                    as: 'team',
+                },
+                {
+                    model: AccessType,
+                    as: 'accessType',
+                },
+                {
+                    model: ControlMessage,
+                    as: 'controlMessage',
+                },
+            ]
+        });
     }
 }
 
