@@ -5,15 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/database/migrations/20230906072401-add-is-active-to-users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/routes/Admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/projeto.I02Q7Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/projeto.I02Q7Q.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/DirectMessageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/DirectMessageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/database/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +58,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/userLeader",
+    "git-widget-placeholder": "feature/initFrontend",
     "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/backend/src/routes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "wsl://Ubuntu-22.04@/home/patrick/.nvm/versions/node/v18.17.1/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -78,6 +93,7 @@
       <updated>1693450018791</updated>
       <workItem from="1693450019888" duration="15000" />
       <workItem from="1693605011596" duration="23169000" />
+      <workItem from="1694103995840" duration="1043000" />
     </task>
     <servers />
   </component>
