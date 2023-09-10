@@ -34,12 +34,26 @@ module.exports = async (req, res, next) => {
             next();
         }
 
-    } catch {
-
-        return res.status(401).json({
-            error: true,
-            code: 130,
-            message: "Your token is invalid"
-        });
+    } catch (error) {
+        if (error.name === 'TokenExpiredError') {
+            return res.status(401).json({
+                error: true,
+                code: 130,
+                message: "Your token has expired"
+            });
+        } else if (error.name === 'JsonWebTokenError') {
+            return res.status(401).json({
+                error: true,
+                code: 130,
+                message: "Your token is invalid"
+            });
+        } else {
+            console.error(error.message);
+            return res.status(500).json({
+                error: true,
+                code: 500,
+                message: "Internal server error"
+            });
+        }
     }
 }

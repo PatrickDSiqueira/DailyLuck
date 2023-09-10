@@ -1,5 +1,4 @@
 const {User, Team, AccessType} = require('../database/models');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('../config/Auth');
 
@@ -26,18 +25,9 @@ class LoginController {
         if (!userExist) {
 
             return res.status(400).json({
-                error: true,
-                message: "User dont exist"
+                error: "User dont exist"
             });
         }
-
-        // if (!(await bcrypt.compare(cpf, userExist.cpf))) {
-        //
-        //     return res.status(400).json({
-        //         error: true,
-        //         message: "Invalid password"
-        //     })
-        // }
 
         return res.status(200).json({
             user: {
