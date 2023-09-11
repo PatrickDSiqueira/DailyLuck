@@ -1,0 +1,3 @@
+[submodule "ProjetoHyperPong"]
+	path = ProjetoHyperPong
+	url = https://github.com/PatrickDSiqueira/ProjetoHyperPong.git
