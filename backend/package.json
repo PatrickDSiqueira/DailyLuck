@@ -13,6 +13,7 @@
     "axios": "^1.5.0",
     "bcryptjs": "^2.4.3",
     "consign": "^0.1.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^3.6.0",
