@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/NotFound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ButtonLogout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CardMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CountDown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/SideBarMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/RandomMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/projeto.I02Q7Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/projeto.I02Q7Q.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/database/migrations/20230905030718-create-control-message.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/migrations/20230905030718-create-control-message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/PrivateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,29 +57,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/notFound",
-    "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/backend/src/routes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "wsl://Ubuntu-22.04@/home/patrick/.nvm/versions/node/v18.17.1/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/viewRandomMessage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Desenvolvimento/DailyLuck/backend/src/routes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;wsl://Ubuntu-22.04@/home/patrick/.nvm/versions/node/v18.17.1/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Desenvolvimento\DailyLuck\backend\src\routes" />
@@ -82,6 +104,7 @@
       <workItem from="1694226569164" duration="5035000" />
       <workItem from="1694262156113" duration="378000" />
       <workItem from="1694288143116" duration="27609000" />
+      <workItem from="1694362844201" duration="10458000" />
     </task>
     <servers />
   </component>

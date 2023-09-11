@@ -35,7 +35,7 @@ export default function Login() {
 
             setErrors((prevErrors) => ({
                 ...prevErrors,
-                ['cpf']: "* Cpf is required",
+                cpf: "* Cpf is required",
             }));
 
             isValid = false;
@@ -44,7 +44,7 @@ export default function Login() {
 
             setErrors((prevErrors) => ({
                 ...prevErrors,
-                ['cpf']: "* Cpf is not valid",
+                cpf: "* Cpf is not valid",
             }));
 
             isValid = false;

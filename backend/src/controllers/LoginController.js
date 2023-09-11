@@ -1,6 +1,7 @@
 const {User, Team, AccessType} = require('../database/models');
 const jwt = require('jsonwebtoken');
 const config = require('../config/Auth');
+const UserRepository = require('../repositories/UserRepository');
 
 class LoginController {
 
@@ -28,6 +29,15 @@ class LoginController {
                 error: "User dont exist"
             });
         }
+        console.log(UserRepository.isLeader(userExist))
+
+        let payload = {
+            firstName: userExist.firstName,
+            lastName: userExist.lastName,
+            isLeader: await UserRepository.isLeader(userExist),
+            isAdmin: await UserRepository.isAdmin(userExist),
+            isEmployees: await UserRepository.isEmployees(userExist),
+        }
 
         return res.status(200).json({
             user: {
@@ -35,7 +45,7 @@ class LoginController {
                 email: userExist.team
             },
             token: jwt.sign(
-                {id: userExist.id},
+                payload,
                 config.secret,
                 {expiresIn: config.expireIn})
         })

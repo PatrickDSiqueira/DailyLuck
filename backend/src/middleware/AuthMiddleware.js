@@ -9,9 +9,8 @@ module.exports = async (req, res, next) => {
 
     if (!auth) {
         return res.status(401).json({
-            error: true,
             code: 130,
-            message: "You're not logged"
+            error: "You're not logged"
         });
     }
 

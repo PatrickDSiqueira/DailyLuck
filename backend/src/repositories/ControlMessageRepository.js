@@ -7,7 +7,8 @@ class ControlMessageRepository {
         try {
 
             return await ControlMessage.create({
-                userId
+                userId,
+                countMessages : 0
             });
 
         } catch (error) {

@@ -4,7 +4,7 @@ import Login from "../views/Login";
 
 function PrivateRoute({children}) {
 
-    const token = useContext(AuthContext);
+    const {token} = useContext(AuthContext);
 
     if (!token) {
 

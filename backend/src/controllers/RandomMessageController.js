@@ -21,14 +21,23 @@ class RandomMessageController {
 
                 if (controlMessage.lastMessage.toDateString() === currentDate.toDateString()) {
 
-                    const tomorrow = new Date(currentDate.setDate(currentDate.getDate() + 1))
-                    return res.status(200).json({update_on: tomorrow})
+                    const tomorrow = new Date(currentDate.setDate(currentDate.getDate() + 1));
+                    return res.status(200).json({update_on: tomorrow.toDateString('pt-br', {timeZone: 'America/Sao_Paulo'})})
                 }
 
                 await ControlMessageRepository.resetControl(controlMessage);
             }
 
+
             const result = await AdvicesLipService.getRandomMessage();
+
+            let message = {
+                result,
+                count: controlMessage.countMessages,
+                date: new Date().toDateString('pt-br', {timeZone: 'America/Sao_Paulo'})
+            }
+
+            console.log(message)
 
             await ControlMessageRepository.countOneMessage(controlMessage)
                 .then(() => {
