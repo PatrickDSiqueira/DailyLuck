@@ -107,7 +107,7 @@ export default function Register() {
                 cpf,
                 first_name: firstName,
                 last_name: lastName,
-                team_id: selectedIdTeam
+                team_id: selectedIdTeam.id
             };
 
             await axios.post(process.env.REACT_APP_BACKEND_URL + '/user/create', params)

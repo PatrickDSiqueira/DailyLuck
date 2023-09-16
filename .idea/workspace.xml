@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/NotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/teste.E06SBg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/teste.E06SBg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/database/models/controlmessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/models/controlmessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/RandomMessageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/RandomMessageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/RandomMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/RandomMessage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/notFound",
+    "git-widget-placeholder": "feature/viewRandomMessage",
     "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/backend/src/routes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -48,7 +53,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "wsl://Ubuntu-22.04@/home/patrick/.nvm/versions/node/v18.17.1/bin/node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -82,6 +87,8 @@
       <workItem from="1694226569164" duration="5035000" />
       <workItem from="1694262156113" duration="378000" />
       <workItem from="1694288143116" duration="27609000" />
+      <workItem from="1694362844201" duration="11058000" />
+      <workItem from="1694875897230" duration="10152000" />
     </task>
     <servers />
   </component>

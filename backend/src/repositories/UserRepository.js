@@ -10,6 +10,7 @@ class UserRepository {
 
         return !user;
     }
+
     async thereIsTeam(id) {
 
         const user = await Team.findOne({
