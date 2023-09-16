@@ -8,20 +8,21 @@ import {Toast} from "primereact/toast";
 
 export default function RandomMessage() {
 
-    const {token, user} = useContext(AuthContext);
+    const {token} = useContext(AuthContext);
 
-    const [messageList, setMessageList] = useState([]);
+    const [actualMessage, setActualMessage] = useState({});
     const [nextMessageIn, setNextMessageIn] = useState(false);
     const [labelCounterDate, setLabelCounterDate] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const toast = useRef(null);
 
+
     const getAnotherMessage = async () => {
 
         setLoading(true);
 
-        await axios.get(process.env.REACT_APP_BACKEND_URL + "/random-message",
+        await axios.get(process.env.REACT_APP_BACKEND_URL + "/new-random-message",
             {
                 headers: {Authorization: `Bearer ${token}`}
             })
@@ -39,7 +40,7 @@ export default function RandomMessage() {
 
                 } else {
 
-                    setMessageList(prevList => [...prevList, data.result])
+                    setActualMessage(data.message.result)
 
                     toast.current.show({
                         severity: 'success',
@@ -90,28 +91,67 @@ export default function RandomMessage() {
         const intervalId = setInterval(countdownTimer, 1000);
 
         return () => clearInterval(intervalId);
+
+
     }, [nextMessageIn]);
 
+    useEffect(() => {
+        const getRandomMessage = async () => {
+
+            setLoading(true);
+
+            await axios.get(process.env.REACT_APP_BACKEND_URL + "/random-message",
+                {
+                    headers: {Authorization: `Bearer ${token}`}
+                })
+                .then(({data}) => {
+
+                    console.log(data)
+
+                    if (data.update_on) {
+
+                        setNextMessageIn(data.update_on);
+
+                    }
+
+                    if (data.message.result) {
+
+                        setActualMessage(data.message.result)
+                    } else {
+                        console.log(200)
+                    }
+
+                })
+                .catch(({response}) => {
+
+                    if (response) {
+                        toast.current.show({
+                            severity: 'warn',
+                            summary: 'Error',
+                            detail: response.data.error
+                        })
+                    }
+                })
+            setLoading(false)
+        }
+
+        getRandomMessage();
+// eslint-disable-next-line
+    }, []);
 
     return <>
         <Toast ref={toast}/>
         <SideBarMenu/>
-        <div>
-            {messageList.map((message) => {
-
-                return <CardMessage messageEn={message.en} messagePt={message.pt}/>
-            })}
+        <div className="card flex justify-content-center" style={{marginTop:"20px", marginBottom:"20px"}}>
+            <CardMessage messageEn={actualMessage.en} messagePt={actualMessage.pt}/>
         </div>
         <div className="card flex justify-content-center">
-            {!nextMessageIn &&
-            <Button label="Another Message" loading={loading} type={"submit"}
-                    style={{fontSize: '12px'}}
-                    onClick={getAnotherMessage}/>
-            }
-
-            {nextMessageIn &&
-            <Button label={labelCounterDate} disabled type={"submit"} icon="pi pi-clock"
-                    style={{fontSize: '12px'}}/>
+            {nextMessageIn
+                ? <Button label={labelCounterDate} disabled type={"submit"} icon="pi pi-clock"
+                          style={{fontSize: '12px'}}/>
+                : <Button label="Another Message" loading={loading} type={"submit"}
+                          style={{fontSize: '12px'}}
+                          onClick={getAnotherMessage}/>
             }
         </div>
 

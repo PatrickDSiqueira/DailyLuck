@@ -16,10 +16,12 @@ class ControlMessageRepository {
         }
     }
 
-    async resetControl(controlMessage){
+    async resetControl(controlMessage) {
+
         try {
 
             controlMessage.countMessages = 0;
+            controlMessage.lastMessage = null;
             controlMessage.save();
 
         } catch (error) {
@@ -27,11 +29,12 @@ class ControlMessageRepository {
         }
     }
 
-    async countOneMessage(controlMessage){
+    async countOneMessage({controlMessage, message}) {
 
         try {
+
             controlMessage.countMessages++;
-            controlMessage.lastMessage = new Date();
+            controlMessage.lastMessage = message;
             controlMessage.save();
 
         } catch (error) {

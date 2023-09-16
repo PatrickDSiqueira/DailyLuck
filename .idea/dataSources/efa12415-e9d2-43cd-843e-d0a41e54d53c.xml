@@ -762,8 +762,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="229" parent="1" name="teste">
-      <IntrospectionTimestamp>2023-09-10.11:39:36</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-10.17:39:36</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-16.09:07:37</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-16.15:07:36</LocalIntrospectionTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <user id="230" parent="1" name="root">
@@ -800,7 +800,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
     <column id="239" parent="233" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -846,7 +846,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
     </column>
     <column id="248" parent="234" name="lastMessage">
-      <DasType>datetime|0s</DasType>
+      <DasType>json|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="249" parent="234" name="createdAt">
@@ -956,7 +956,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="271" parent="237" name="id">
-      <AutoIncrement>5</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -986,7 +986,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="277" parent="238" name="id">
-      <AutoIncrement>10</AutoIncrement>
+      <AutoIncrement>18</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
