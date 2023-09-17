@@ -13,11 +13,9 @@ class UserRepository {
 
     async thereIsTeam(id) {
 
-        const user = await Team.findOne({
+        return await Team.findOne({
             where: {id},
         });
-
-        return !user;
     }
 
     async createUser(cpf, firstName, lastName, access_type_id, team_id) {

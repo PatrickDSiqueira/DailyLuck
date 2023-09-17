@@ -166,6 +166,7 @@ class UserController {
                     error: 'The cpf is used.'
                 });
             }
+
             if (!await UserRepository.thereIsTeam(team_id)) {
 
                 return res.status(400).json({

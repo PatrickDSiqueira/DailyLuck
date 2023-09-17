@@ -9,6 +9,7 @@ import NotFound from "./views/NotFound";
 import RandomMessage from "./views/RandomMessage";
 import TeamMessage from "./views/TeamMessage";
 import Users from "./views/Users";
+import CreateLeader from "./views/CreateLeader";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/random-message" element={<PrivateRoute><RandomMessage/></PrivateRoute>}/>
                 <Route path="/team-message" element={<PrivateRoute><TeamMessage/></PrivateRoute>}/>
                 <Route path="/users" element={<PrivateRoute><Users/></PrivateRoute>}/>
+                <Route path="/create-leader" element={<PrivateRoute><CreateLeader/></PrivateRoute>}/>
             </Routes>
         </BrowserRouter>
     );

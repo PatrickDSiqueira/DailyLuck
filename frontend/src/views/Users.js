@@ -7,6 +7,8 @@ import {DataTable} from "primereact/datatable";
 import {Column} from "primereact/column";
 import {InputSwitch} from "primereact/inputswitch";
 import {ConfirmDialog, confirmDialog} from 'primereact/confirmdialog';
+import {Button} from "primereact/button";
+import {useNavigate} from "react-router-dom";
 
 export default function TeamMessage() {
 
@@ -17,6 +19,7 @@ export default function TeamMessage() {
     const [userList, setUserList] = useState([]);
 
     const toast = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getAllUsers = async () => {
@@ -26,6 +29,7 @@ export default function TeamMessage() {
                     headers: {Authorization: `Bearer ${token}`}
                 })
                 .then(({data}) => {
+                    setUserList([])
                     console.log(data)
                     setUserList(data)
                 })
@@ -86,19 +90,28 @@ export default function TeamMessage() {
         });
     }
 
+    const redirectCreateUSer = () => {
+
+        navigate('/create-leader')
+    }
+
     return <>
         <SideBarMenu/>
         <Toast ref={toast}/>
         <ConfirmDialog/>
-
-        <DataTable value={userList} paginator rows={5} tableStyle={{minWidth: '50rem'}}>
-            <Column field="firstName" header="First Name" sortable style={{width: '25%'}}></Column>
-            <Column field="lastName" header="Last Name" sortable style={{width: '25%'}}></Column>
-            <Column field="cpf" header="CPF" sortable style={{width: '25%'}}></Column>
-            <Column field="accessType.name" header="Access" sortable style={{width: '25%'}}></Column>
-            <Column field="team.name" header="Team" sortable style={{width: '25%'}}></Column>
-            <Column field="isActive" header="Active" sortable dataType="boolean" body={isActiveSymbol}
-                    style={{width: '25%'}}></Column>
-        </DataTable>
+        <div className="card flex justify-content-center" style={{marginTop: "12px"}}>
+            <DataTable value={userList} paginator rows={5} tableStyle={{minWidth: '50rem'}}>
+                <Column field="firstName" header="First Name" sortable style={{width: '25%'}}></Column>
+                <Column field="lastName" header="Last Name" sortable style={{width: '25%'}}></Column>
+                <Column field="cpf" header="CPF" sortable style={{width: '25%'}}></Column>
+                <Column field="accessType.name" header="Access" sortable style={{width: '25%'}}></Column>
+                <Column field="team.name" header="Team" sortable style={{width: '25%'}}></Column>
+                <Column field="isActive" header="Active" sortable dataType="boolean" body={isActiveSymbol}
+                        style={{width: '25%'}}></Column>
+            </DataTable>
+        </div>
+        <div className={"card flex justify-content-center"} style={{marginTop: '12px'}}>
+            <Button label="Create a leader" onClick={redirectCreateUSer}/>
+        </div>
     </>
 }
