@@ -9,7 +9,6 @@ class TeamService {
             status: 200,
             listTeam
         };
-
     }
 }
 

@@ -43,7 +43,6 @@ class RandomMessageController {
             status: 201,
             message
         };
-
     }
 
     async get(userId) {
