@@ -96,6 +96,50 @@ module.exports = {
                 createdAt: new Date(),
                 updatedAt: new Date()
             },
+            {
+                firstName: "Rodolfo",
+                lastName: "Victor",
+                cpf: "49100794082",
+                access_type_id: 2,
+                team_id: 1,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                firstName: "Joao",
+                lastName: "Celsio",
+                cpf: "39095101088",
+                access_type_id: 2,
+                team_id: 2,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                firstName: "Rafael",
+                lastName: "Antunes",
+                cpf: "64421677043",
+                access_type_id: 2,
+                team_id: 3,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                firstName: "Janette",
+                lastName: "Lopes",
+                cpf: "79451810072",
+                access_type_id: 2,
+                team_id: 4,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                firstName: "Galvão",
+                lastName: "Alves",
+                cpf: "51103282000",
+                access_type_id: 3,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
         ], {});
 
     },

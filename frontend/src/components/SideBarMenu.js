@@ -20,6 +20,11 @@ function SideBarMenu() {
             label: 'Mensagens da Equipe',
             icon: 'pi pi-envelope',
             command: () => navigate('/team-message')
+        },
+        {
+            label: 'Usuários',
+            icon: 'pi pi-sitemap',
+            command: () => navigate('/users')
         }
     ];
 
