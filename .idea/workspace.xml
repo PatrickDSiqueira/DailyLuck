@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db269409-6585-4aee-90ad-cc679cf7361d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ModalCreateTeamMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ModalEditTeamMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/TeamMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/teste.E06SBg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa12415-e9d2-43cd-843e-d0a41e54d53c/storage_v2/_src_/schema/teste.E06SBg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/RandomMessageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/database/models/controlmessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/models/controlmessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/ControlMessageRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/RandomMessageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/RandomMessageRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/RandomMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/RandomMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/DirectMessageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/DirectMessageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middleware/AuthMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/UserRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/DirectMessageRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/DirectMessageRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CardMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CardMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +52,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/viewRandomMessage",
-    "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/backend/src/routes",
+    "git-widget-placeholder": "feature/teamMessage",
+    "last_opened_file_path": "C:/Desenvolvimento/DailyLuck/frontend/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +72,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Desenvolvimento\DailyLuck\frontend\src\components" />
+      <recent name="C:\Desenvolvimento\DailyLuck\frontend\src\views" />
       <recent name="C:\Desenvolvimento\DailyLuck\backend\src\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -89,6 +98,7 @@
       <workItem from="1694288143116" duration="27609000" />
       <workItem from="1694362844201" duration="11058000" />
       <workItem from="1694875897230" duration="10152000" />
+      <workItem from="1694890893940" duration="17641000" />
     </task>
     <servers />
   </component>

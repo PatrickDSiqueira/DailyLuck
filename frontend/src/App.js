@@ -7,10 +7,11 @@ import Register from "./views/Register";
 import PrivateRoute from "./routes/PrivateRoute";
 import NotFound from "./views/NotFound";
 import RandomMessage from "./views/RandomMessage";
+import TeamMessage from "./views/TeamMessage";
 
 function App() {
 
-    const {token, user} = useContext(AuthContext);
+    const {token} = useContext(AuthContext);
 
     if (token === undefined) {
 
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/" element={<PrivateRoute><Home/></PrivateRoute>}/>
                 <Route path="/random-message" element={<PrivateRoute><RandomMessage/></PrivateRoute>}/>
-                <Route path="/team-message" element={<PrivateRoute><Home/></PrivateRoute>}/>
+                <Route path="/team-message" element={<PrivateRoute><TeamMessage/></PrivateRoute>}/>
             </Routes>
         </BrowserRouter>
     );

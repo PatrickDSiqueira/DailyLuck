@@ -13,8 +13,8 @@ class DirectMessageController {
 
             if (directMessageList.length === 0) {
 
-                return res.status(404)
-                    .json(['Solicitar ao líder da equipe o cadastro de uma mensagem.'])
+                return res.status(200)
+                    .json([{message:'Solicite ao seu líder de equipe o cadastro de uma mensagem.'}])
             }
 
             return res.status(200).json(directMessageList);
@@ -105,7 +105,7 @@ class DirectMessageController {
         try {
 
             const {user_id} = req;
-            const {id} = req.body;
+            const {id} = req.params;
 
             const currentUser = await UserRepository.getUserById(user_id);
 

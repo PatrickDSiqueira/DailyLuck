@@ -102,7 +102,7 @@ class UserRepository {
 
     async isLeader(user) {
 
-        return user.accessType.name === 'Lider';
+        return user.access_type_id === 2;
     }
 
     async inactiveUser(user) {
@@ -118,11 +118,11 @@ class UserRepository {
     }
 
     async isAdmin(user) {
-        return user.accessType.name === 'Administrador';
+        return user.access_type_id === 3;
     }
 
     async isEmployees(user) {
-        return user.accessType.name === 'Colaborador';
+        return user.access_type_id === 1;
     }
 }
 

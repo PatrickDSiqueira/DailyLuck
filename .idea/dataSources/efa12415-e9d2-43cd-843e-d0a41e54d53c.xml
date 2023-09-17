@@ -762,8 +762,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="229" parent="1" name="teste">
-      <IntrospectionTimestamp>2023-09-16.09:07:37</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-16.15:07:36</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-16.12:24:22</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-16.18:24:22</LocalIntrospectionTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <user id="230" parent="1" name="root">
@@ -830,7 +830,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="245" parent="234" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

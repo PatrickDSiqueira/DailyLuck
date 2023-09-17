@@ -76,9 +76,7 @@ export default function Login() {
                 summary: 'Error',
                 detail: 'Please fill out the required fields'
             })
-
         }
-
 
         setLoadingLogin(false);
     }

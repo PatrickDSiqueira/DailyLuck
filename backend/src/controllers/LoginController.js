@@ -29,9 +29,9 @@ class LoginController {
                 error: "User dont exist"
             });
         }
-        console.log(UserRepository.isLeader(userExist))
 
         let payload = {
+            id: userExist.id,
             firstName: userExist.firstName,
             lastName: userExist.lastName,
             isLeader: await UserRepository.isLeader(userExist),
