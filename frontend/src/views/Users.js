@@ -12,9 +12,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function TeamMessage() {
 
-    const {token, user} = useContext(AuthContext);
-
-    const isAdmin = user.isAdmin;
+    const {token} = useContext(AuthContext);
 
     const [userList, setUserList] = useState([]);
 
@@ -29,9 +27,8 @@ export default function TeamMessage() {
                     headers: {Authorization: `Bearer ${token}`}
                 })
                 .then(({data}) => {
-                    setUserList([])
-                    console.log(data)
-                    setUserList(data)
+
+                    setUserList(data.userList)
                 })
                 .catch(({response}) => {
 

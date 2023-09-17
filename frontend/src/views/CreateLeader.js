@@ -22,7 +22,7 @@ export default function CreateLeader() {
     const [listTeam, setListTeam] = useState();
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
-    const {token, user} = useContext(AuthContext);
+    const {token} = useContext(AuthContext);
 
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function CreateLeader() {
             try {
                 const response = await axios.get(process.env.REACT_APP_BACKEND_URL + '/team-list');
                 if (response.status === 200) {
-                    setListTeam(response.data);
+                    setListTeam(response.data.listTeam);
                 }
             } catch (error) {
                 console.error("Erro ao buscar a lista de equipes:", error);

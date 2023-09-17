@@ -1,28 +1,18 @@
-const UserRepository = require('../repositories/UserRepository');
-const DirectMessageRepository = require('../repositories/DirectMessageRepository');
+const DirectMessageService = require("../services/DirectMessageService");
 
 class DirectMessageController {
 
     async get(req, res) {
 
         try {
+
             const {user_id} = req;
-
-            const currentUser = await UserRepository.getUserById(user_id);
-            const directMessageList = await DirectMessageRepository.getMessageByTeamId(currentUser.team_id);
-
-            if (directMessageList.length === 0) {
-
-                return res.status(200)
-                    .json([{message:'Solicite ao seu líder de equipe o cadastro de uma mensagem.'}])
-            }
-
-            return res.status(200).json(directMessageList);
+            const result = await DirectMessageService.getListDirectMessage(user_id);
+            return res.status(result.status).json(result);
 
         } catch (error) {
 
-            console.error(error)
-
+            console.error(error.message)
             return res.status(500).json({error: 'Internal error'})
         }
     }
@@ -33,30 +23,14 @@ class DirectMessageController {
 
             const {user_id} = req;
             const {message} = req.body;
-
-            const currentUser = await UserRepository.getUserById(user_id);
-
-            if (await UserRepository.isLeader(currentUser) === false) {
-
-                return res.status(403)
-                    .json({error: 'you dont have access'});
-            }
-
-            if (!message) {
-                return res.status(400).json({error: 'Message is required'})
-            }
-
-            await DirectMessageRepository.create(currentUser.team_id, message);
-
-            return res.status(200).json({message: 'message created successful'})
+            const result = await DirectMessageService.createDirectMessage(user_id, message);
+            return res.status(result.status).json(result);
 
         } catch (error) {
 
-            console.error(error)
-
+            console.error(error.message)
             return res.status(500).json({error: 'Internal error'})
         }
-
     }
 
     async update(req, res) {
@@ -65,37 +39,12 @@ class DirectMessageController {
 
             const {user_id} = req;
             const {message, id} = req.body;
-
-            const currentUser = await UserRepository.getUserById(user_id);
-
-            if (await UserRepository.isLeader(currentUser) === false) {
-
-                return res.status(403)
-                    .json({error: 'you dont have access'});
-            }
-
-            if (!message) {
-                return res.status(400).json({error: 'Message is required'})
-            }
-
-            if (!id) {
-                return res.status(400).json({error: 'Identification message is required'})
-            }
-
-            const directMessage = await DirectMessageRepository.getById(id);
-
-            if (!directMessage) {
-
-                return res.status(404).json({error: 'Message no found'})
-            }
-
-            await DirectMessageRepository.uptadeMessage(directMessage, message)
-
-            return res.status(200).json({message: 'message update successful'})
+            const result = await DirectMessageService.update(user_id, message, id);
+            return res.status(result.status).json(result);
 
         } catch (error) {
 
-            console.error(error)
+            console.error(error.message)
             return res.status(500).json({error: 'Internal error'})
         }
     }
@@ -106,37 +55,14 @@ class DirectMessageController {
 
             const {user_id} = req;
             const {id} = req.params;
-
-            const currentUser = await UserRepository.getUserById(user_id);
-
-            if (await UserRepository.isLeader(currentUser) === false) {
-
-                return res.status(403)
-                    .json({error: 'you dont have access'});
-            }
-
-            if (!id) {
-                return res.status(400).json({error: 'Identification message is required'})
-            }
-
-            const directMessage = await DirectMessageRepository.getById(id);
-
-            if (!directMessage) {
-
-                return res.status(404).json({error: 'Message no found'})
-            }
-
-            await DirectMessageRepository.deleteMessage(directMessage)
-
-            return res.status(200).json({message: 'message deleted successful'})
+            const result = await DirectMessageService.delete(user_id, id);
+            return res.status(result.status).json(result);
 
         } catch (error) {
 
-            console.error(error)
-
+            console.error(error.message)
             return res.status(500).json({error: 'Internal error'})
         }
-
     }
 }
 

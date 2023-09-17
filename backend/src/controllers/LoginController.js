@@ -1,65 +1,20 @@
-const {User, Team, AccessType} = require('../database/models');
-const jwt = require('jsonwebtoken');
-const config = require('../config/Auth');
-const UserRepository = require('../repositories/UserRepository');
+const LoginService = require("../services/LoginService");
 
 class LoginController {
 
     async index(req, res) {
 
-        const {cpf} = req.body;
+        try {
 
-        const userExist = await User.findOne({
-            where: {cpf},
-            include: [
-                {
-                    model: Team,
-                    as: 'team',
-                },
-                {
-                    model: AccessType,
-                    as: 'accessType',
-                },
-            ]
-        });
+            const {cpf} = req.body;
+            const result = await LoginService.index(cpf);
+            res.status(result.status).json(result);
 
-        if (!userExist) {
+        } catch (e) {
 
-            return res.status(400).json({
-                error: "User dont exist"
-            });
+            console.error(e.message)
+            return res.status(500).json({error: 'Internal error'})
         }
-
-        if (!userExist.isActive) {
-
-            return res.status(400).json({
-                error: "Access blocked. Contact your administrator"
-            });
-        }
-
-        let payload = {
-            id: userExist.id,
-            firstName: userExist.firstName,
-            lastName: userExist.lastName,
-            isLeader: await UserRepository.isLeader(userExist),
-            isAdmin: await UserRepository.isAdmin(userExist),
-            isEmployees: await UserRepository.isEmployees(userExist),
-        }
-
-        return res.status(200).json({
-            user: {
-                name: userExist.name,
-                email: userExist.team
-            },
-            token: jwt.sign(
-                payload,
-                config.secret,
-                {expiresIn: config.expireIn})
-        })
-    }
-
-    async logout(req, res) {
-
     }
 }
 

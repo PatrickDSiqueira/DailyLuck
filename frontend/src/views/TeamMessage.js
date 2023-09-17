@@ -41,8 +41,7 @@ export default function TeamMessage() {
                 })
                 .then(({data}) => {
 
-                    setMessageTeamList(data)
-
+                    setMessageTeamList(data.messages)
                 })
                 .catch(({response}) => {
 

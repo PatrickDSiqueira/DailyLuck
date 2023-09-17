@@ -27,7 +27,8 @@ export default function Register() {
             try {
                 const response = await axios.get(process.env.REACT_APP_BACKEND_URL + '/team-list');
                 if (response.status === 200) {
-                    setListTeam(response.data);
+
+                    setListTeam(response.data.listTeam);
                 }
             } catch (error) {
                 console.error("Erro ao buscar a lista de equipes:", error);
