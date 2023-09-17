@@ -101,11 +101,6 @@ class UserController {
                 return res.status(400).json({error: 'Identification user is required'})
             }
 
-            if (!actual_status) {
-
-                return res.status(400).json({error: 'Actual status user is required'})
-            }
-
             const user = await UserRepository.getUserById(id);
 
             if (!user) {
@@ -113,7 +108,7 @@ class UserController {
                 return res.status(404).json({error: 'User no found'})
             }
 
-            if (actual_status) {
+            if (user.isActive) {
 
                 await UserRepository.inactiveUser(user);
 

@@ -8,6 +8,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import NotFound from "./views/NotFound";
 import RandomMessage from "./views/RandomMessage";
 import TeamMessage from "./views/TeamMessage";
+import Users from "./views/Users";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/" element={<PrivateRoute><Home/></PrivateRoute>}/>
                 <Route path="/random-message" element={<PrivateRoute><RandomMessage/></PrivateRoute>}/>
                 <Route path="/team-message" element={<PrivateRoute><TeamMessage/></PrivateRoute>}/>
+                <Route path="/users" element={<PrivateRoute><Users/></PrivateRoute>}/>
             </Routes>
         </BrowserRouter>
     );
