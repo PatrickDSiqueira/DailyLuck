@@ -1,18 +1,20 @@
-import React, {useContext, useRef, useState} from 'react';
-import {Dialog} from 'primereact/dialog';
-import {InputTextarea} from "primereact/inputtextarea";
-import {Toast} from "primereact/toast";
-import {ConfirmDialog} from "primereact/confirmdialog";
-import {Button} from "primereact/button";
+import SideBarMenu from "../components/SideBarMenu";
+import React, {useContext, useRef, useState} from "react";
 import {AuthContext} from "../context/Auth";
+import {Button} from "primereact/button";
 import axios from "axios";
+import {Toast} from "primereact/toast";
+import {InputTextarea} from "primereact/inputtextarea";
+import {useNavigate} from "react-router-dom";
 
-export default function ModalCreateTeamMessage({isVisible, onHide}) {
+export default function CreateTeamMessage() {
 
     const {token} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const toast = useRef(null);
 
     const [message, setMessage] = useState('');
-    const toast = useRef(null);
     const [loading, setLoading] = useState(false);
 
     const createMessage = async () => {
@@ -45,29 +47,21 @@ export default function ModalCreateTeamMessage({isVisible, onHide}) {
         setLoading(false);
     }
 
-
-    return (
-        <Dialog
-            visible={isVisible}
-            onHide={onHide}
-            modal={true}
-            header="Create Message"
-            style={{width: '50vw'}}
-        >
-            <Toast ref={toast}/>
-            <div className="card flex justify-content-center">
+    return <>
+        <SideBarMenu/>
+        <Toast ref={toast}/>
+        <Toast ref={toast}/>
+        <div className="card flex justify-content-center" style={{marginTop:"15px"}}>
             <span className="p-float-label">
                 <InputTextarea id="description" value={message} onChange={(e) => setMessage(e.target.value)} rows={5}
                                cols={30}/>
                 <label htmlFor="description">Your message to your team</label>
             </span>
-            </div>
-            <ConfirmDialog/>
-            <div className="card flex flex-wrap gap-2 justify-content-center">
-                <Button loading={loading} onClick={createMessage} icon="pi pi-check" label="Confirm"
-                        className="mr-2"></Button>
-                <Button onClick={onHide} icon="pi pi-times" label="Cancel"></Button>
-            </div>
-        </Dialog>
-    );
-};
+        </div>
+        <div className="card flex flex-wrap gap-2 justify-content-center">
+            <Button loading={loading} onClick={createMessage} icon="pi pi-check" label="Confirm"
+                    className="mr-2"></Button>
+            <Button icon="pi pi-times" onClick={()=>navigate(-1)} label="Cancel"></Button>
+        </div>
+    </>
+}

@@ -30,6 +30,13 @@ class LoginController {
             });
         }
 
+        if (!userExist.isActive) {
+
+            return res.status(400).json({
+                error: "Access blocked. Contact your administrator"
+            });
+        }
+
         let payload = {
             id: userExist.id,
             firstName: userExist.firstName,

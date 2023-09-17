@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import { Menubar } from 'primereact/menubar';
-import { Button } from 'primereact/button';
+import {Menubar} from 'primereact/menubar';
+import {Button} from 'primereact/button';
 import lucky from "../assets/images/lucky.png";
 import {AuthContext} from "../context/Auth";
 import ButtonLogout from "./ButtonLogout";
@@ -10,7 +10,9 @@ function SideBarMenu() {
 
     const navigate = useNavigate();
 
-    const items = [
+    const {user} = useContext(AuthContext);
+
+    let items = [
         {
             label: 'Mensagens Aleatórias',
             icon: 'pi pi-history',
@@ -20,15 +22,32 @@ function SideBarMenu() {
             label: 'Mensagens da Equipe',
             icon: 'pi pi-envelope',
             command: () => navigate('/team-message')
-        },
-        {
-            label: 'Usuários',
-            icon: 'pi pi-sitemap',
-            command: () => navigate('/users')
-        }
-    ];
+        },]
 
-    const start = <img alt="Logo" src={lucky} style={{height:"50px"}} />;
+    if (user.isLeader) {
+
+        items.push(
+            {
+                label: 'Cadastro de Mensagens',
+                icon: 'pi pi-plus',
+                command: () => navigate('/create-team-message')
+            }
+        );
+    }
+
+    if (user.isAdmin) {
+
+        items = [
+
+            {
+                label: 'Usuários',
+                icon: 'pi pi-sitemap',
+                command: () => navigate('/users')
+            }
+        ];
+    }
+
+    const start = <img alt="Logo" src={lucky} style={{height: "50px"}}/>;
 
     const end = (
         <ButtonLogout />
@@ -36,7 +55,7 @@ function SideBarMenu() {
 
     return (
         <div>
-            <Menubar model={items} start={start} end={end} />
+            <Menubar model={items} start={start} end={end}/>
         </div>
     );
 }

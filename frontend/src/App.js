@@ -4,12 +4,13 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import {AuthContext} from "./context/Auth";
 import Register from "./views/Register";
-import PrivateRoute from "./routes/PrivateRoute";
+import PrivateRoute, {PrivateRouteLeader, PrivateRouteAdmin} from "./routes/PrivateRoute";
 import NotFound from "./views/NotFound";
 import RandomMessage from "./views/RandomMessage";
 import TeamMessage from "./views/TeamMessage";
 import Users from "./views/Users";
 import CreateLeader from "./views/CreateLeader";
+import CreateTeamMessage from "./views/CreateTeamMessage";
 
 function App() {
 
@@ -29,8 +30,9 @@ function App() {
                 <Route path="/" element={<PrivateRoute><Home/></PrivateRoute>}/>
                 <Route path="/random-message" element={<PrivateRoute><RandomMessage/></PrivateRoute>}/>
                 <Route path="/team-message" element={<PrivateRoute><TeamMessage/></PrivateRoute>}/>
-                <Route path="/users" element={<PrivateRoute><Users/></PrivateRoute>}/>
-                <Route path="/create-leader" element={<PrivateRoute><CreateLeader/></PrivateRoute>}/>
+                <Route path="/create-team-message" element={<PrivateRouteLeader><CreateTeamMessage/></PrivateRouteLeader>}/>
+                <Route path="/users" element={<PrivateRouteAdmin><Users/></PrivateRouteAdmin>}/>
+                <Route path="/create-leader" element={<PrivateRouteAdmin><CreateLeader/></PrivateRouteAdmin>}/>
             </Routes>
         </BrowserRouter>
     );

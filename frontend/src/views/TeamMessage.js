@@ -5,7 +5,6 @@ import {Button} from "primereact/button";
 import axios from "axios";
 import {Toast} from "primereact/toast";
 import {Card} from "primereact/card";
-import ModalCreateTeamMessage from "../components/ModalCreateTeamMessage";
 import ModalEditTeamMessage from "../components/ModalEditTeamMessage";
 
 export default function TeamMessage() {
@@ -14,26 +13,18 @@ export default function TeamMessage() {
 
     const isLeader = user.isLeader;
 
-    const [modalVisibleCreate, setModalVisibleCreate] = useState(false);
-    const [modalVisibleEdit, setModalVisibleEdit] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
     const [contentMessage, setContentMessage] = useState('');
     const [messageId, setMessageId] = useState();
 
-    const showModalCreate = () => {
-        setModalVisibleCreate(true);
-    };
+    const showModal = () => {
 
-    const hideModalCreate = () => {
-        setModalVisibleCreate(false);
-    };
-    const showModalEdit = () => {
-
-        setModalVisibleEdit(true);
+        setModalVisible(true);
     };
 
     const hideModalEdit = () => {
         setContentMessage('');
-        setModalVisibleEdit(false);
+        setModalVisible(false);
     };
 
     const [messageTeamList, setMessageTeamList] = useState([]);
@@ -75,16 +66,14 @@ export default function TeamMessage() {
 
         setMessageId(id);
 
-        showModalEdit();
+        showModal();
     }
 
     return <>
         <SideBarMenu/>
         <Toast ref={toast}/>
         {isLeader && <>
-            <Button label="Create new Message" icon="pi pi-plus" onClick={showModalCreate}/>
-            <ModalCreateTeamMessage isVisible={modalVisibleCreate} onHide={hideModalCreate}/>
-            <ModalEditTeamMessage id={messageId} content={contentMessage} isVisible={modalVisibleEdit}
+            <ModalEditTeamMessage id={messageId} content={contentMessage} isVisible={modalVisible}
                                   onHide={hideModalEdit}/>
         </>}
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
