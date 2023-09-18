@@ -23,7 +23,7 @@ module.exports = {
                 defaultValue: 0,
             },
             lastMessage: {
-                type: Sequelize.DATE,
+                type: Sequelize.JSON,
                 allowNull: true,
             },
             createdAt: {

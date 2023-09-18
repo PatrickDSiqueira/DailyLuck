@@ -35,7 +35,7 @@ export default function Login() {
 
             setErrors((prevErrors) => ({
                 ...prevErrors,
-                ['cpf']: "* Cpf is required",
+                cpf: "* Cpf is required",
             }));
 
             isValid = false;
@@ -44,7 +44,7 @@ export default function Login() {
 
             setErrors((prevErrors) => ({
                 ...prevErrors,
-                ['cpf']: "* Cpf is not valid",
+                cpf: "* Cpf is not valid",
             }));
 
             isValid = false;
@@ -76,9 +76,7 @@ export default function Login() {
                 summary: 'Error',
                 detail: 'Please fill out the required fields'
             })
-
         }
-
 
         setLoadingLogin(false);
     }

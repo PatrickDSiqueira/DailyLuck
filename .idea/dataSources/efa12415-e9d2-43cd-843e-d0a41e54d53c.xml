@@ -755,16 +755,16 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="226" parent="1" name="performance_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="227" parent="1" name="projeto">
-      <IntrospectionTimestamp>2023-09-07.19:39:54</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-08.01:39:54</LocalIntrospectionTimestamp>
+    <schema id="227" parent="1" name="radiologia_newton">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="228" parent="1" name="radiologia_newton">
-      <CollationName>latin1_swedish_ci</CollationName>
-    </schema>
-    <schema id="229" parent="1" name="sys">
+    <schema id="228" parent="1" name="sys">
       <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="229" parent="1" name="teste">
+      <IntrospectionTimestamp>2023-09-16.12:24:22</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-16.18:24:22</LocalIntrospectionTimestamp>
+      <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <user id="230" parent="1" name="root">
       <Host>localhost</Host>
@@ -775,32 +775,32 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="232" parent="1" name="mysql.sys">
       <Host>localhost</Host>
     </user>
-    <table id="233" parent="227" name="accesstypes">
+    <table id="233" parent="229" name="accesstypes">
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
-    <table id="234" parent="227" name="controlmessages">
+    <table id="234" parent="229" name="controlmessages">
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
-    <table id="235" parent="227" name="directmessages">
+    <table id="235" parent="229" name="directmessages">
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
-    <table id="236" parent="227" name="sequelizemeta">
+    <table id="236" parent="229" name="sequelizemeta">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_unicode_ci</CollationName>
     </table>
-    <table id="237" parent="227" name="teams">
+    <table id="237" parent="229" name="teams">
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
-    <table id="238" parent="227" name="users">
+    <table id="238" parent="229" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
     <column id="239" parent="233" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -830,7 +830,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="245" parent="234" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -846,7 +846,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
     </column>
     <column id="248" parent="234" name="lastMessage">
-      <DasType>datetime|0s</DasType>
+      <DasType>json|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="249" parent="234" name="createdAt">
@@ -956,7 +956,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="271" parent="237" name="id">
-      <AutoIncrement>5</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -986,7 +986,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="277" parent="238" name="id">
-      <AutoIncrement>9</AutoIncrement>
+      <AutoIncrement>18</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

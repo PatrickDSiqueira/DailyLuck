@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   ControlMessage.init({
     userId: DataTypes.INTEGER,
     countMessages: DataTypes.INTEGER,
-    lastMessage: DataTypes.DATE,
+    lastMessage: DataTypes.JSON,
   }, {
     sequelize,
     modelName: 'ControlMessage',

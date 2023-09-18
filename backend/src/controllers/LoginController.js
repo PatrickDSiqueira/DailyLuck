@@ -1,48 +1,20 @@
-const {User, Team, AccessType} = require('../database/models');
-const jwt = require('jsonwebtoken');
-const config = require('../config/Auth');
+const LoginService = require("../services/LoginService");
 
 class LoginController {
 
     async index(req, res) {
 
-        const {cpf} = req.body;
+        try {
 
-        const userExist = await User.findOne({
-            where: {cpf},
-            include: [
-                {
-                    model: Team,
-                    as: 'team',
-                },
-                {
-                    model: AccessType,
-                    as: 'accessType',
-                },
-            ]
-        });
+            const {cpf} = req.body;
+            const result = await LoginService.index(cpf);
+            res.status(result.status).json(result);
 
-        if (!userExist) {
+        } catch (e) {
 
-            return res.status(400).json({
-                error: "User dont exist"
-            });
+            console.error(e.message)
+            return res.status(500).json({error: 'Internal error'})
         }
-
-        return res.status(200).json({
-            user: {
-                name: userExist.name,
-                email: userExist.team
-            },
-            token: jwt.sign(
-                {id: userExist.id},
-                config.secret,
-                {expiresIn: config.expireIn})
-        })
-    }
-
-    async logout(req, res) {
-
     }
 }
 

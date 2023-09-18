@@ -10,13 +10,12 @@ class UserRepository {
 
         return !user;
     }
+
     async thereIsTeam(id) {
 
-        const user = await Team.findOne({
+        return await Team.findOne({
             where: {id},
         });
-
-        return !user;
     }
 
     async createUser(cpf, firstName, lastName, access_type_id, team_id) {
@@ -101,7 +100,7 @@ class UserRepository {
 
     async isLeader(user) {
 
-        return user.accessType.name === 'Lider';
+        return user.access_type_id === 2;
     }
 
     async inactiveUser(user) {
@@ -117,11 +116,11 @@ class UserRepository {
     }
 
     async isAdmin(user) {
-        return user.accessType.name === 'Administrador';
+        return user.access_type_id === 3;
     }
 
     async isEmployees(user) {
-        return user.accessType.name === 'Colaborador';
+        return user.access_type_id === 1;
     }
 }
 

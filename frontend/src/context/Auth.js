@@ -6,6 +6,7 @@ export const AuthContext = createContext(undefined);
 export default function AuthContextProvider({children}) {
 
     const [token, setToken] = useState();
+    const [user, setUser] = useState({});
 
 
     const fetchData = async () => {
@@ -17,6 +18,8 @@ export default function AuthContextProvider({children}) {
             try {
 
                 const decodedToken = await jwtDecode(storeToken);
+
+                setUser(decodedToken)
 
                 const currentTime = Math.floor(new Date().getTime() / 1000)
 
@@ -42,5 +45,5 @@ export default function AuthContextProvider({children}) {
 // eslint-disable-next-line
     }, []);
 
-    return <AuthContext.Provider value={token}>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{token, user}}>{children}</AuthContext.Provider>
 }

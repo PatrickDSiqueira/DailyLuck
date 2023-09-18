@@ -1,14 +1,16 @@
 import InputCpf from "../components/InputCpf";
 import {Button} from "primereact/button";
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {Dropdown} from 'primereact/dropdown';
 import {InputText} from "primereact/inputtext";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import validateCPF from "../Utils/cpf"
 import {Toast} from 'primereact/toast';
+import {AuthContext} from "../context/Auth";
+import SideBarMenu from "../components/SideBarMenu";
 
-export default function Register() {
+export default function CreateLeader() {
 
     const navigate = useNavigate();
     const toast = useRef(null);
@@ -20,6 +22,8 @@ export default function Register() {
     const [listTeam, setListTeam] = useState();
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
+    const {token} = useContext(AuthContext);
+
 
     useEffect(() => {
 
@@ -27,7 +31,6 @@ export default function Register() {
             try {
                 const response = await axios.get(process.env.REACT_APP_BACKEND_URL + '/team-list');
                 if (response.status === 200) {
-
                     setListTeam(response.data.listTeam);
                 }
             } catch (error) {
@@ -45,11 +48,7 @@ export default function Register() {
         justifyContent: 'center',
     };
 
-    const styleSpan = {
-        marginTop: '12px'
-    };
-
-    const createUser = async () => {
+    const createLeader = async () => {
 
         setLoading(true);
         setErrors({});
@@ -111,7 +110,9 @@ export default function Register() {
                 team_id: selectedIdTeam.id
             };
 
-            await axios.post(process.env.REACT_APP_BACKEND_URL + '/user/create', params)
+            await axios.post(process.env.REACT_APP_BACKEND_URL + '/user-leader', params, {
+                headers: {Authorization: `Bearer ${token}`}
+            })
                 .then((response) => {
 
                     toast.current.show({
@@ -120,7 +121,7 @@ export default function Register() {
                         detail: response.data.firstName + " created"
                     });
 
-                    navigate('/login')
+                    navigate('/users')
                 })
                 .catch(({response}) => {
 
@@ -153,9 +154,10 @@ export default function Register() {
 
     return (
         <div>
+            <SideBarMenu/>
             <div style={styleForm}>
                 <Toast ref={toast}/>
-                <h2 style={styleSpan}>Register</h2>
+                <h2 style={{marginTop: "12px"}}>Register Leader</h2>
                 <InputCpf setCpf={setCpf} error={getFormErrorMessage('cpf')}/>
                 <div className="flex flex-column gap-2">
                     <label htmlFor="input-first-name">First Name:</label>
@@ -177,13 +179,11 @@ export default function Register() {
                               className="w-full md:w-13rem"/>
                     {getFormErrorMessage('team')}
                 </div>
-                <div className={"card flex justify-content-center"} style={styleSpan}>
-                    <Button label={"Registrar"} icon={'pi pi-open'} severity={"info"}
-                            loading={loading} onClick={createUser}/>
-                </div>
                 <div className={"card flex justify-content-center"}>
-                    <Button label={"I have a acount"} type={"submit"} link style={{fontSize: '12px'}}
-                            onClick={() => navigate('/login')}/>
+                    <Button label={"Back"} icon={'pi pi-open'} severity={"secondary"}
+                            onClick={() => navigate(-1)} />
+                    <Button label={"Create"} icon={'pi pi-open'} severity={"info"}
+                            loading={loading} onClick={createLeader} style={{marginLeft: "12px"}}/>
                 </div>
             </div>
         </div>

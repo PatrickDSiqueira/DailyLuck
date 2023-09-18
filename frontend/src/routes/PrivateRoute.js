@@ -1,17 +1,40 @@
 import React, {useContext} from "react";
 import {AuthContext} from "../context/Auth";
 import Login from "../views/Login";
+import NotFound from "../views/NotFound";
 
-function PrivateRoute({children}) {
+export default function PrivateRoute({children}) {
 
-    const token = useContext(AuthContext);
+    const {token} = useContext(AuthContext);
 
     if (!token) {
 
-        return <Login />;
+        return <Login/>;
     }
 
     return children;
 }
 
-export default PrivateRoute;
+export function PrivateRouteAdmin({children}) {
+
+    const {token, user} = useContext(AuthContext);
+
+    if (!token) {
+
+        return <Login/>;
+    }
+
+    return !user.isAdmin ? < NotFound/> : children;
+}
+
+export function PrivateRouteLeader({children}) {
+
+    const {token, user} = useContext(AuthContext);
+
+    if (!token) {
+
+        return <Login/>;
+    }
+
+    return !user.isLeader ? < NotFound/> : children;
+}
